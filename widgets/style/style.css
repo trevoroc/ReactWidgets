@@ -1,0 +1,40 @@
+html, body, section, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+  font-family: 'Oswald', sans-serif;
+}
+
+.clock {
+  margin: 0 auto;
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+
+  border: black 2px solid;
+  background-color: azure;
+  padding: 10px;
+}
+
+.date, .time {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
