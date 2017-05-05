@@ -13,8 +13,8 @@ html, body, section, div {
   font-family: 'Oswald', sans-serif;
 }
 
-.clock {
-  margin: 0 auto;
+.clock, .weather {
+  margin: 5px auto;
   display: flex;
   width: 300px;
   flex-direction: column;
@@ -28,6 +28,12 @@ html, body, section, div {
   display: flex;
   justify-content: space-between;
 }
+
+.city, .temperature {
+  text-align: center;
+}
+
+
 
 ul {
   list-style: none;

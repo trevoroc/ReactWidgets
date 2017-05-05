@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Clock from './clock';
+import Weather from './weather';
 
 class Root extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Root extends React.Component {
     return (
       <div>
         <Clock />
+        <Weather />
       </div>
     );
   }
