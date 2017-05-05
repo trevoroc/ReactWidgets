@@ -25,7 +25,7 @@ class Weather extends React.Component {
 
       xhr.onload = function () {
         // console.log(xhr.status);
-        console.log(JSON.parse(xhr.response));
+        // console.log(JSON.parse(xhr.response));
 
         reactComponent.setState({ weather: JSON.parse(xhr.response) });
       };
