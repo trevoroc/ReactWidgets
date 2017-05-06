@@ -3,15 +3,13 @@ import React from 'react';
 class AutoComplete extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.state = { inputVal: '' };
   }
 
   render() {
-    console.log(this.state.inputVal);
     return (
       <div className="auto-complete">
-        <input type="text" id="input"></input>
+        <input onChange={this.handleChange.bind(this)} type="text" id="input"></input>
         <ul className="auto-complete-suggestions">
           {
             this.props.names.filter( (name) => {
@@ -26,13 +24,12 @@ class AutoComplete extends React.Component {
     );
   }
 
-  componentDidMount() {
-    const input = document.getElementById("input");
-    input.addEventListener("input", (e) => {
-      e.preventDefault();
-      this.setState({ inputVal: input.value });
-    });
+  handleChange(event){
+    this.setState({ inputVal: event.target.value });
   }
+
+
+
 }
 
 export default AutoComplete;

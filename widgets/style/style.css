@@ -1,4 +1,4 @@
-html, body, section, div {
+html, body, section, div, ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -13,7 +13,7 @@ html, body, section, div {
   font-family: 'Oswald', sans-serif;
 }
 
-.clock, .weather {
+.clock, .weather, .auto-complete {
   margin: 5px auto;
   display: flex;
   width: 300px;
@@ -33,8 +33,6 @@ html, body, section, div {
   text-align: center;
 }
 
-
-
 ul {
   list-style: none;
 }
@@ -43,4 +41,31 @@ img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.auto li{
+  cursor: pointer;
+  list-style-type: square;
+}
+
+.auto-enter {
+  opacity: 0.01;
+  transform: translateY(500%);
+}
+
+.auto-enter.auto-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 700ms ease-in, transform 700ms ease-in;
+}
+
+.auto-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.auto-leave.auto-leave-active {
+  opacity: 0.01;
+  transform: translateY(500%);
+  transition: opacity 700ms ease-in, transform 700ms ease-in;
 }
